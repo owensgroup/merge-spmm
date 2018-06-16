@@ -113,10 +113,8 @@ wget https://sparse.tamu.edu/MM/Janna/PFlow_742.tar.gz
 wget https://sparse.tamu.edu/MM/GHS_psdef/inline_1.tar.gz
 wget https://sparse.tamu.edu/MM/JGD_GL7d/GL7d18.tar.gz
 wget https://sparse.tamu.edu/MM/DIMACS10/packing-500x100x100-b050.tar.gz
-wget https://sparse.tamu.edu/MM/Dziekonski/dielFilterV3clx.tar.gz
 wget https://sparse.tamu.edu/MM/DIMACS10/coPapersCiteseer.tar.gz
 wget https://sparse.tamu.edu/MM/DIMACS10/coPapersDBLP.tar.gz
-wget https://sparse.tamu.edu/MM/Sinclair/3Dspectralwave.tar.gz
 wget https://sparse.tamu.edu/MM/JGD_GL7d/GL7d20.tar.gz
 wget https://sparse.tamu.edu/MM/DIMACS10/rgg_n_2_21_s0.tar.gz
 wget https://sparse.tamu.edu/MM/Belcastro/mouse_gene.tar.gz
@@ -131,7 +129,6 @@ wget https://sparse.tamu.edu/MM/Freescale/FullChip.tar.gz
 wget https://sparse.tamu.edu/MM/Bodendiek/CurlCurl_4.tar.gz
 wget https://sparse.tamu.edu/MM/JGD_GL7d/GL7d17.tar.gz
 wget https://sparse.tamu.edu/MM/DIMACS10/asia_osm.tar.gz
-wget https://sparse.tamu.edu/MM/Dziekonski/dielFilterV2clx.tar.gz
 wget https://sparse.tamu.edu/MM/DIMACS10/delaunay_n22.tar.gz
 wget https://sparse.tamu.edu/MM/DIMACS10/NLR.tar.gz
 wget https://sparse.tamu.edu/MM/DIMACS10/germany_osm.tar.gz
@@ -148,7 +145,6 @@ wget https://sparse.tamu.edu/MM/DIMACS10/kron_g500-logn18.tar.gz
 wget https://sparse.tamu.edu/MM/Janna/StocF-1465.tar.gz
 wget https://sparse.tamu.edu/MM/DIMACS10/M6.tar.gz
 wget https://sparse.tamu.edu/MM/Rajat/rajat31.tar.gz
-wget https://sparse.tamu.edu/MM/Lee/fem_hifreq_circuit.tar.gz
 wget https://sparse.tamu.edu/MM/Mazaheri/bundle_adj.tar.gz
 wget https://sparse.tamu.edu/MM/DIMACS10/hugetric-00010.tar.gz
 wget https://sparse.tamu.edu/MM/Gleich/wikipedia-20051105.tar.gz
