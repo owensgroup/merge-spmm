@@ -122,11 +122,8 @@ A step by step series of examples that tell you have to get a development env ru
 1. First, we must download the software:
 
 ```
-git clone --recursive https://github.com/owensgroup/GraphBLAS.git
-git checkout europar
-cd ext/moderngpu
-git checkout europar
-cd ../../
+git clone --recursive https://github.com/owensgroup/merge-spmm.git
+cd merge-spmm
 ```
 
 2. Also, we must compile a dependency.
