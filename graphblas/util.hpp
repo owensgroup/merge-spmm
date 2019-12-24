@@ -239,7 +239,7 @@ void makeSymmetric( std::vector<graphblas::Index>& row_indices,
   graphblas::Index curr_row = row_indices[0];
   graphblas::Index last_row;
 
-  for( graphblas::Index i=1; i<nvals; i++ ) {
+  for( graphblas::Index i=0; i<nvals; i++ ) {
     last = curr;
     last_row = curr_row;
     curr = col_indices[i];
@@ -251,7 +251,7 @@ void makeSymmetric( std::vector<graphblas::Index>& row_indices,
       col_indices[i] = -1;
 
   // Duplicates
-    if( curr == last && curr_row == last_row ) {
+    if( i > 0 && curr == last && curr_row == last_row ) {
       //printf("Curr: %d, Last: %d, Curr_row: %d, Last_row: %d\n", curr, last, 
     //  curr_row, last_row );
       col_indices[i] = -1;
@@ -319,7 +319,7 @@ int readMtx( const char *fname,
   if( mm_is_symmetric(matcode) )
   // If user wants to treat MTX as a directed graph
   //if( undirected )
-    makeSymmetric<T>( row_indices, col_indices, values, nvals, f );
+    makeSymmetric<T>( row_indices, col_indices, values, nvals );
   customSort<T>( row_indices, col_indices, values );
 
   if( DEBUG ) mm_write_banner(stdout, matcode);
