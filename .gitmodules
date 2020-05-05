@@ -1,6 +1,7 @@
 [submodule "ext/moderngpu"]
 	path = ext/moderngpu
 	url = https://github.com/ctcyang/moderngpu.git
+	branch = europar
 [submodule "ext/merge-spmv"]
 	path = ext/merge-spmv
 	url = https://github.com/owensgroup/merge-spmv.git
