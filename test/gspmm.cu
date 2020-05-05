@@ -102,9 +102,7 @@ int main( int argc, char** argv )
   // Matrix B
   graphblas::Index MEM_SIZE = 1000000000;  // 2x4=8GB GPU memory for dense
   graphblas::Index max_ncols = std::min( MEM_SIZE/nrows/32*32, MAX_NCOLS );
-  //if( ncols%32!=0 && max_ncols%32!=0 ) max_ncols = (ncols+31)/32*32;
-  if( DEBUG && max_ncols!=MAX_NCOLS ) std::cout << "Restricting col to: "
-      << max_ncols << std::endl;
+  if( DEBUG ) std::cout << "Restricting col to: " << max_ncols << std::endl;
 
   graphblas::Matrix<float> b(ncols, max_ncols);
   std::vector<float> denseVal;
@@ -122,7 +120,7 @@ int main( int argc, char** argv )
 
   // Row major order
   if( ROW_MAJOR )
-    for( int i=0; i<nrows; i++ )
+    for( int i=0; i<ncols; i++ )
       for( int j=0; j<max_ncols; j++ ) {
         if( i==j ) denseVal.push_back(1.0);
         else denseVal.push_back(0.0);
@@ -130,12 +128,13 @@ int main( int argc, char** argv )
   else
   // Column major order
     for( int i=0; i<max_ncols; i++ )
-      for( int j=0; j<nrows; j++ ) {
+      for( int j=0; j<ncols; j++ ) {
         //denseVal.push_back(1.0);
         if( i==j ) denseVal.push_back(1.0);
         else denseVal.push_back(0.0);
       }
   b.build( denseVal );
+  if( DEBUG ) b.print();
   graphblas::Matrix<float> c(nrows, max_ncols);
   graphblas::Semiring op;
 
