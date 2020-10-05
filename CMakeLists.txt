@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 2.8)
 
 # packages                                                                                                                                                                                                 
-find_package(CUDA)
+find_package(CUDA REQUIRED)
 find_package(Boost COMPONENTS program_options REQUIRED)
 #find_package(OpenMP REQUIRED)
 
@@ -16,14 +16,14 @@ set( PROJ_PATH      ${CMAKE_SOURCE_DIR})
 set( PROJ_OUT_PATH  ${CMAKE_BINARY_DIR})
 set( PROJ_HEADERS   "" )
 set( PROJ_LIBRARIES "" )
-set( PROJ_INCLUDES  "./" "ext/moderngpu/include" "$ENV{CUDA_HOME}/samples/common/inc/" )
+set( PROJ_INCLUDES  "./" "ext/moderngpu/include" "${CUDA_TOOLKIT_ROOT_DIR}/samples/common/inc/" )
 set( mgpu_SRC_FILES "ext/moderngpu/src/mgpucontext.cu" "ext/moderngpu/src/mgpuutil.cpp")
 set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin )
 set( CUDA_PROPAGATE_HOST_FLAGS OFF )
 
-#set( CUDA_CURAND_LIBRARY "$ENV{CUDA_HOME}/lib64/libcurand.so" )
-set( CUDA_CUBLAS_LIBRARY "$ENV{CUDA_HOME}/lib64/libcublas.so" )
-set( CUDA_CUSPARSE_LIBRARY "$ENV{CUDA_HOME}/lib64/libcusparse.so" )
+#set( CUDA_CURAND_LIBRARY "${CUDA_TOOLKIT_ROOT_DIR}/lib64/libcurand.so" )
+set( CUDA_CUBLAS_LIBRARY "${CUDA_TOOLKIT_ROOT_DIR}/lib64/libcublas.so" )
+set( CUDA_CUSPARSE_LIBRARY "${CUDA_TOOLKIT_ROOT_DIR}/lib64/libcusparse.so" )
 
 #FILE( GLOB_RECURSE PROJ_SOURCES graphblas/*.cu ../graphblas/*.cpp )
 #FILE( GLOB_RECURSE PROJ_LIBRARIES ext/cublas1.1/*.cu )
